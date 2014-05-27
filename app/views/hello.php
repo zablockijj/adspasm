@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Laravel PHP Framework</title>
+	<title>ReadNuts</title>
 	{{ HTML::style('css/ink.css'); }}
 </head>
 <body>
