@@ -55,7 +55,7 @@
 
 				<ul class="stage column-group half-gutters">
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/1">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -64,7 +64,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/2">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -73,7 +73,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/3">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -82,7 +82,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/4">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -91,7 +91,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/5">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -100,7 +100,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/6">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -109,7 +109,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/7">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -118,7 +118,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/8">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
@@ -127,7 +127,7 @@
 						</div>
 					</li>
 
-					<li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
+					<li class="slide xlarge-25 large-25 medium-33 small-100 tiny-100">
 						<img class="half-bottom-space" src="http://lorempixel.com/400/200/sports/9">
 						<div class="description">
 							<h4 class="no-margin">Highlight Title</h4>
