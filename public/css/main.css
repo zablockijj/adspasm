@@ -1,0 +1,32 @@
+nav {
+	background: #2d2f33;
+	display: block;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	right: -200px;
+	font-size: 15px;
+	top: 0;
+	width: 20px;
+	z-index: 2000;
+	transition: right 0.3s ease-in-out 0s;
+	-webkit-transition: right 0.3s ease-in-out 0s;
+	-moz-transition: right 0.3s ease-in-out 0s;
+	-o-transition: right 0.3s ease-in-out 0s;
+}
+.nav-expanded nav {
+	right: 0;
+}
+.main-menu {
+	padding-top: 12px;
+}
+.main-menu li {
+	border-bottom: 1px solid #323949;
+	margin-left: 20px;
+	font-size: 18px;
+	padding: 12px;
+}
+.main-menu li a {
+	color: #6F7D8C;
+	text-decoration: none;
+}
