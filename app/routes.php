@@ -28,8 +28,8 @@ Route::get('push/message', function()
 		return Response::json(array('status' => 400));
 	}*/
 });
-Route::get('foo/bar', function()
-{
+Route::get('foo/bar', function() {
+	
 	function pwCall($method, $data) {
 		$url = 'https://cp.pushwoosh.com/json/1.3/' . $method;
 		$request = json_encode(['request' => $data]);
@@ -48,23 +48,34 @@ Route::get('foo/bar', function()
 		
 		return $response;
 	}
-	 
-	 
-	$response = pwCall('createMessage', [
-		'application' => '7C0DE-37FBD',
-		'auth' => '6E0cIwLJ0b3jTg5RKjrR5H9R27G1hCakyaYfyGsyzdUPXLRAn2foUmdMA5K2G7pwcblDzT6b4PgRO6vy8EO1',
-		'notifications' => [
-				[
-					'send_date' => 'now',
-					'content' => 'test',
-					'data' => ['custom' => 'json data'],
-				//	'link' => 'http://pushwoosh.com/',
-					'devices' => [
-						'APA91bFcqdEFW9PJPOxNlLnJxhdd8u7k2G3AI78W3vg2ZJ-C2lYrltOZgHabD3Ma1CtuuPWN47IoKuxJJBPjS2Luz4UuZsfnDcKMn92SWvaTBS1aMVTtzucvhce4jN5LQiQFki8yEozBz5fVrtvLXOyYD0aL9-CNIVHI-iNstYd2KyNrl01un3M'
+	
+	$validator = Validator::make(Input::all(), array(
+		'message' => 'required',
+		'to' => 'required|array'
+	));
+	if ($validator->passes()) {
+		$response = pwCall('createMessage', [
+			'application' => '7C0DE-37FBD',
+			'auth' => '6E0cIwLJ0b3jTg5RKjrR5H9R27G1hCakyaYfyGsyzdUPXLRAn2foUmdMA5K2G7pwcblDzT6b4PgRO6vy8EO1',
+			'notifications' => [
+					[
+						'send_date' => 'now',
+						'content' => Input::get('message'),
+					//	'data' => ['custom' => 'json data'],
+					//	'link' => 'http://pushwoosh.com/',
+						'devices' => Input::get('to')
+						/*[
+							'APA91bFcqdEFW9PJPOxNlLnJxhdd8u7k2G3AI78W3vg2ZJ-C2lYrltOZgHabD3Ma1CtuuPWN47IoKuxJJBPjS2Luz4UuZsfnDcKMn92SWvaTBS1aMVTtzucvhce4jN5LQiQFki8yEozBz5fVrtvLXOyYD0aL9-CNIVHI-iNstYd2KyNrl01un3M'
+						]*/
 					]
 				]
 			]
-		]
-	);
-    return $response;
+		);
+		$response = json_decode($response);
+		if ($response['status_code'] == 200)
+			return Response::json(array('status' => 200));
+		else
+			return Response::json(array('status' => 400, 'message' => 'Unable to send that message'));
+	}
+	return Response::json(array('status' => 400, 'message' => 'No valid input passed'));
 });
