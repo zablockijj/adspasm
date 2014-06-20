@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::get('foo/bar', function()
 {
-    return 'Hello World';
+    return Response::json(array('name' => 'Steve', 'state' => 'CA'));
 });
