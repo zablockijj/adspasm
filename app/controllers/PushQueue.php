@@ -12,7 +12,7 @@ class PushQueue {
 			'notifications' => array(
 					array(
 						'send_date' => 'now',
-						'content' => $data['message'],
+						'content' => 'test',
 						'data' => array('custom' => 'json data'),
 						'devices' => array(
 							'APA91bFcqdEFW9PJPOxNlLnJxhdd8u7k2G3AI78W3vg2ZJ-C2lYrltOZgHabD3Ma1CtuuPWN47IoKuxJJBPjS2Luz4UuZsfnDcKMn92SWvaTBS1aMVTtzucvhce4jN5LQiQFki8yEozBz5fVrtvLXOyYD0aL9-CNIVHI-iNstYd2KyNrl01un3M'
