@@ -17,9 +17,9 @@ Route::get('/', function()
 });
 Route::get('push/message', function()
 {
-	Queue::push('PushQueue', [
+/*	Queue::push('PushQueue', [
 		'message' => 'stauffermatt'
-	]);
+	]);*/
 	return Response::json(array('status' => 400));
 	/*
 	if (Input::has('msg') && Input::has('msg')) {
