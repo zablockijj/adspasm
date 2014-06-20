@@ -50,11 +50,10 @@ Route::get('foo/bar', function() {
 	}
 	
 	$validator = Validator::make(Input::all(), array(
-		'message' => 'required',
-		'to' => 'required|array'
+		'message' => 'required'
 	));
 	if ($validator->passes()) {
-		$response = pwCall('createMessage', [
+	/*	$response = pwCall('createMessage', [
 			'application' => '7C0DE-37FBD',
 			'auth' => '6E0cIwLJ0b3jTg5RKjrR5H9R27G1hCakyaYfyGsyzdUPXLRAn2foUmdMA5K2G7pwcblDzT6b4PgRO6vy8EO1',
 			'notifications' => [
@@ -64,18 +63,21 @@ Route::get('foo/bar', function() {
 					//	'data' => ['custom' => 'json data'],
 					//	'link' => 'http://pushwoosh.com/',
 						'devices' => Input::get('to')
-						/*[
+						[
 							'APA91bFcqdEFW9PJPOxNlLnJxhdd8u7k2G3AI78W3vg2ZJ-C2lYrltOZgHabD3Ma1CtuuPWN47IoKuxJJBPjS2Luz4UuZsfnDcKMn92SWvaTBS1aMVTtzucvhce4jN5LQiQFki8yEozBz5fVrtvLXOyYD0aL9-CNIVHI-iNstYd2KyNrl01un3M'
-						]*/
+						]
 					]
 				]
 			]
 		);
-		$response = json_decode($response);
-		if ($response['status_code'] == 200)
-			return Response::json(array('status' => 200));
-		else
-			return Response::json(array('status' => 400, 'message' => 'Unable to send that message'));
+		$response = json_decode($response);*/
+		
+		return Response::json(array('status' => 200));
+			
+	//	if ($response['status_code'] == 200)
+	//		return Response::json(array('status' => 200));
+	//	else
+	//		return Response::json(array('status' => 400, 'message' => 'Unable to send that message'));
 	}
 	return Response::json(array('status' => 400, 'message' => 'No valid input passed'));
 });
