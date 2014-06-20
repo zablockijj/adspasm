@@ -15,7 +15,19 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-
+Route::get('push/message', function()
+{
+	Queue::push('PushQueue', [
+		'message' => 'stauffermatt'
+	]);
+	return Response::json(array('status' => 400));
+	/*
+	if (Input::has('msg') && Input::has('msg')) {
+		//
+	} else {
+		return Response::json(array('status' => 400));
+	}*/
+});
 Route::get('foo/bar', function()
 {
 	function pwCall($method, $data) {
@@ -26,7 +38,7 @@ Route::get('foo/bar', function()
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 		curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
-		curl_setopt($ch, CURLOPT_HEADER, true);
+		//curl_setopt($ch, CURLOPT_HEADER, true);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 	 
