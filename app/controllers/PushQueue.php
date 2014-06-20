@@ -6,7 +6,7 @@ class PushQueue {
 	 *	date = array('message', '')
 	 */
 	public function fire($job, $data) {
-		$pushdata = array(
+		/*$pushdata = array(
 			'application' => '7C0DE-37FBD',
 			'auth' => '6E0cIwLJ0b3jTg5RKjrR5H9R27G1hCakyaYfyGsyzdUPXLRAn2foUmdMA5K2G7pwcblDzT6b4PgRO6vy8EO1',
 			'notifications' => array(
@@ -21,7 +21,7 @@ class PushQueue {
 				)
 			);
 			
-		/*$url = 'https://cp.pushwoosh.com/json/1.3/createMessage';
+		$url = 'https://cp.pushwoosh.com/json/1.3/createMessage';
 		$request = json_encode(array('request' => $pushdata));
 	 
 		$ch = curl_init($url);
