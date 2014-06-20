@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::post('foo/bar', function()
+Route::get('foo/bar', function()
 {
     return 'Hello World';
 });
