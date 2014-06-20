@@ -21,7 +21,7 @@ class PushQueue {
 				)
 			);
 			
-		$url = 'https://cp.pushwoosh.com/json/1.3/createMessage';
+		/*$url = 'https://cp.pushwoosh.com/json/1.3/createMessage';
 		$request = json_encode(array('request' => $pushdata));
 	 
 		$ch = curl_init($url);
@@ -34,7 +34,7 @@ class PushQueue {
 	 
 		$response = curl_exec($ch);
 		//$info = curl_getinfo($ch);
-		curl_close($ch);
+		curl_close($ch);*/
 		 
 		 
 		
