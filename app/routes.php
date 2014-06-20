@@ -31,7 +31,7 @@ Route::get('foo/bar', function()
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 	 
 		$response = curl_exec($ch);
-		$info = curl_getinfo($ch);
+		//$info = curl_getinfo($ch);
 		curl_close($ch);
 		
 		return $response;
