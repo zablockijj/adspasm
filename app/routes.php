@@ -46,7 +46,7 @@ Route::get('foo/bar', function()
 					'send_date' => 'now',
 					'content' => 'test',
 					'data' => ['custom' => 'json data'],
-					'link' => 'http://pushwoosh.com/',
+				//	'link' => 'http://pushwoosh.com/',
 					'devices' => [
 						'APA91bFcqdEFW9PJPOxNlLnJxhdd8u7k2G3AI78W3vg2ZJ-C2lYrltOZgHabD3Ma1CtuuPWN47IoKuxJJBPjS2Luz4UuZsfnDcKMn92SWvaTBS1aMVTtzucvhce4jN5LQiQFki8yEozBz5fVrtvLXOyYD0aL9-CNIVHI-iNstYd2KyNrl01un3M'
 					]
@@ -54,5 +54,5 @@ Route::get('foo/bar', function()
 			]
 		]
 	);
-    return Response::json($response);
+    return $response;
 });
